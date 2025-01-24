@@ -1,0 +1,543 @@
+/* Styles de base */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    width: 100%;
+}
+
+
+/* navbar */
+.nav {
+    background-color: #333; /* Couleur de fond */
+    color: white;          /* Couleur du texte */
+    padding: 0.5rem 1rem;  /* Espacement interne */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ombre */
+}
+
+.nav-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo */
+.img_molen {
+    height: 50px; /* Taille du logo */
+    cursor: pointer;
+}
+
+/* Menu de navigation */
+.nav_ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem; /* Espacement entre les éléments */
+    margin: 0;
+    padding: 0;
+}
+
+.nav_ul li {
+    display: inline-block;
+}
+
+.nav_ul li a {
+    text-decoration: none;
+    color: white; /* Couleur du texte */
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+/* Effet hover sur les liens */
+.nav_ul li a:hover {
+    color: #e91e63; /* Couleur au survol */
+    font-weight: bold;
+}
+
+/* Pour un rendu responsive */
+@media (max-width: 768px) {
+    .nav-div {
+        flex-direction: column; /* Empile les éléments */
+    }
+
+    .nav_ul {
+        flex-direction: column; /* Menu vertical */
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+
+
+
+
+/* Conteneur des formations */
+.contenu-formations {
+    position: relative; /* Nécessaire pour positionner les éléments enfants */
+    width: 100%; /* Prend toute la largeur */
+    height: 100vh; /* Prend toute la hauteur de l'écran */
+    overflow: hidden; /* Coupe tout ce qui dépasse */
+}
+
+/* Image de formation */
+.image-formation {
+    width: 100%; /* L'image s'adapte à la largeur de l'écran */
+    height: 100%; /* L'image s'adapte à la hauteur de l'écran */
+    object-fit: cover; /* Garde les proportions de l'image */
+    position: absolute; /* Permet de superposer les éléments */
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Place l'image derrière le texte */
+}
+
+/* Titre et boutons superposés */
+.sous-titre-formations,
+.boutons-formations {
+    position: absolute; /* Position absolue pour superposer les éléments */
+    top: 50%; /* Place au milieu de l'écran */
+    left: 50%; /* Centre horizontalement */
+    transform: translate(-50%, -50%); /* Centre exactement */
+    text-align: center; /* Centre le contenu */
+    color: #fff; /* Texte blanc pour contraste */
+    z-index: 1; /* Assure que le texte est au-dessus de l'image */
+}
+
+/* Titre principal */
+.sous-titre-formations {
+    font-size: 2.5rem; /* Taille du titre */
+    font-weight: bold; /* Texte en gras */
+    margin-bottom: 2rem; /* Espacement sous le titre */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Ombre pour lisibilité */
+}
+
+/* Conteneur des boutons */
+.boutons-formations {
+    display: flex; /* Alignement horizontal des boutons */
+    gap: 1rem; /* Espacement entre les boutons */
+    justify-content: center; /* Centre les boutons */
+    margin-top: 6rem; /* Espacement au-dessus */
+}
+
+/* Boutons */
+.btn-formation-courte,
+.btn-formation-longue {
+    padding: 0.8rem 1.5rem; /* Espacement interne */
+    font-size: 1rem; /* Taille du texte */
+    font-weight: bold; /* Texte en gras */
+    border: none; /* Supprime les bordures */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur pointer */
+    background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent */
+    color: #fff; /* Texte blanc */
+    transition: all 0.3s ease; /* Animation au survol */
+}
+
+/* Effet au survol des boutons */
+.btn-formation-courte:hover,
+.btn-formation-longue:hover {
+    background-color: #e91e63; /* Couleur au survol */
+    color: #fff; /* Texte blanc */
+    transform: scale(1.1); /* Agrandit légèrement au survol */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sous-titre-formations {
+        font-size: 2rem; /* Réduit la taille du texte pour petits écrans */
+    }
+
+    .boutons-formations {
+        flex-direction: column; /* Empile les boutons verticalement */
+        gap: 1rem; /* Ajoute de l'espace entre les boutons */
+    }
+}
+
+
+
+
+/* section */
+
+/* Section principale */
+.section-techno {
+    display: flex; /* Affichage flexible pour aligner le contenu */
+    align-items: center; /* Centre verticalement les éléments */
+    justify-content: space-between; /* Espace entre les colonnes */
+    padding: 2rem; /* Espacement interne */
+    margin-top: 5rem;
+    gap: 2rem; /* Espace entre les deux colonnes */
+    background-color: #f9f9f9; /* Couleur de fond légère */
+}
+
+/* Contenu texte */
+.contenu-techno {
+    flex: 1; /* Prend tout l'espace restant */
+    max-width: 50%; /* Limite la largeur maximale */
+}
+
+/* Titre principal */
+.titre-techno {
+    font-size: 2.5rem; /* Taille du titre */
+    font-weight: bold; /* Texte en gras */
+    color: #333; /* Couleur sombre */
+    margin-bottom: 1.5rem; /* Espacement sous le titre */
+}
+
+/* Description */
+.description-techno {
+    font-size: 1.2rem; /* Taille du texte */
+    color: #555; /* Couleur légèrement grisée */
+    line-height: 1.8; /* Hauteur de ligne pour lisibilité */
+    margin-bottom: 1.5rem; /* Espacement entre les paragraphes */
+}
+
+/* Boutons */
+.boutons-techno {
+    display: flex; /* Alignement horizontal des boutons */
+    gap: 1rem; /* Espace entre les boutons */
+}
+
+/* Boutons individuels */
+.btn-techno-courte,
+.btn-techno-longue {
+    padding: 0.8rem 1.5rem; /* Espacement interne */
+    font-size: 1rem; /* Taille du texte */
+    font-weight: bold; /* Texte en gras */
+    border: none; /* Supprime les bordures */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur pointer */
+    background-color: #ff5722; /* Couleur de fond */
+    color: #fff; /* Texte blanc */
+    transition: all 0.3s ease; /* Animation au survol */
+}
+
+/* Effet au survol des boutons */
+.btn-techno-courte:hover,
+.btn-techno-longue:hover {
+    background-color: #e64a19; /* Couleur au survol */
+    transform: scale(1.05); /* Agrandit légèrement au survol */
+}
+
+/* Conteneur image */
+.image-techno {
+    flex: 1; /* Prend tout l'espace restant */
+    text-align: center; /* Centre l'image horizontalement */
+}
+
+/* Image */
+.img-techno {
+    width: 100%; /* L'image prend toute la largeur disponible */
+    max-width: 500px; /* Limite la taille maximale */
+    border-radius: 10px; /* Coins légèrement arrondis */
+    object-fit: cover; /* Adapte l'image tout en gardant les proportions */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section-techno {
+        flex-direction: column; /* Aligne les éléments verticalement */
+        text-align: center; /* Centre le contenu */
+    }
+
+    .contenu-techno,
+    .image-techno {
+        max-width: 100%; /* La largeur devient pleine */
+    }
+
+    .boutons-techno {
+        justify-content: center; /* Centre les boutons */
+    }
+}
+
+
+/* Formation courte */
+.forma-court{
+    text-align: center;
+    margin-top: 5em;
+}
+.forma-h1{
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+.img-forma{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+}
+.img-court{
+    width: 270px;
+}
+
+
+
+/* formation longue */
+/* Section principale */
+.section-formations-longues {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #f8f9fa;
+}
+
+/* Titre principal */
+.titre-formations-longues {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: #212529;
+}
+
+/* Grille des formations */
+.grid-formations-longues {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    justify-items: center;
+    padding: 1rem;
+}
+
+/* Carte de formation */
+.carte-formation-longue {
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Effet hover */
+.carte-formation-longue:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Numéro de la formation */
+.numero-formation {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+/* Contenu de la formation */
+.contenu-formation {
+    margin-bottom: 1rem;
+}
+
+.nom-formation {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 0.5rem;
+}
+
+.description-formation {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 0.5rem;
+}
+
+.details-formation {
+    font-size: 0.875rem;
+    color: #adb5bd;
+}
+
+/* Bouton d'inscription */
+.btn-inscription {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-inscription:hover {
+    background-color: #0056b3;
+}
+
+
+/* Youtube */
+/* Section principale - YouTube */
+.youtube-section {
+    padding: 2rem 1rem;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+/* Titre de la section */
+.youtube-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #212529;
+    margin-bottom: 2rem;
+}
+
+/* Conteneur des vidéos */
+.youtube-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+/* Style des vidéos */
+.youtube-video {
+    width: 100%;
+    max-width: 560px; /* Largeur maximale pour grand écran */
+    aspect-ratio: 16 / 9; /* Ratio 16:9 pour les vidéos */
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Effet hover sur les vidéos */
+.youtube-video:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.stats{
+    width: 78%;
+    
+}
+
+
+/* FAQ */
+/* Section FAQ */
+.section-faq {
+    padding: 20px; /* Espacement interne */
+    background-color: #f9f9f9; /* Couleur de fond claire */
+    border-radius: 8px; /* Coins arrondis */
+}
+
+/* Titre principal FAQ */
+.titre-faq {
+    text-align: center; /* Centrer le titre */
+    font-size: 2em; /* Taille de police */
+    margin-bottom: 20px; /* Espace sous le titre */
+}
+
+/* Conteneur des questions FAQ */
+.questions-faq {
+    display: flex; /* Utilisation de flexbox pour l'agencement */
+    flex-direction: column; /* Alignement des éléments en colonne */
+    gap: 15px; /* Espace entre chaque question */
+}
+
+/* Bloc pour chaque question FAQ */
+.question-faq {
+    padding: 15px; /* Espacement interne autour de chaque question */
+    background-color: #fff; /* Fond blanc pour chaque question */
+    border: 1px solid #ddd; /* Bordure gris clair */
+    border-radius: 6px; /* Coins arrondis */
+}
+
+/* Style pour la question */
+.question {
+    font-size: 1.2em; /* Taille de police légèrement plus grande */
+    margin-bottom: 10px; /* Espace sous la question */
+}
+
+/* Style pour la réponse */
+.reponse {
+    font-size: 1em; /* Taille de police pour la réponse */
+    color: #555; /* Couleur de texte gris clair */
+}
+
+
+
+/* footer */
+
+/* Footer global */
+.pied-de-page {
+    background-color: #333; /* Couleur de fond sombre */
+    color: #fff; /* Texte blanc */
+    padding: 2rem 1rem; /* Espacement interne */
+    display: flex; /* Flexbox pour aligner les sections */
+    justify-content: space-between; /* Espacement entre les sections */
+    flex-wrap: wrap; /* Retourne à la ligne si nécessaire */
+    text-align: center; /* Centre le texte par défaut */
+}
+
+/* Section des réseaux sociaux */
+.reseaux-sociaux {
+    display: flex; /* Aligne les réseaux horizontalement */
+    gap: 2rem; /* Espacement entre les icônes */
+    justify-content: center; /* Centre les icônes horizontalement */
+    flex-wrap: wrap; /* Retourne à la ligne si nécessaire */
+    flex: 1; /* Occupe une partie égale */
+    margin-bottom: 2rem; /* Espacement en bas pour petits écrans */
+}
+
+.reseau {
+    display: flex; /* Flexbox pour aligner l'icône et le texte */
+    flex-direction: column; /* Aligne verticalement */
+    align-items: center; /* Centre les éléments */
+    gap: 0.5rem; /* Espacement entre l'icône et le nom */
+    font-size: 1rem; /* Taille du texte */
+}
+
+.reseau i {
+    font-size: 2rem; /* Taille des icônes */
+    color: #e91e63; /* Couleur principale des icônes */
+    transition: transform 0.3s ease, color 0.3s ease; /* Animation au survol */
+}
+
+.reseau i:hover {
+    transform: scale(1.2); /* Agrandit l'icône au survol */
+    color: #fff; /* Change la couleur au survol */
+}
+
+.nom-reseau {
+    font-size: 1rem; /* Taille du texte */
+    font-weight: bold; /* Texte en gras */
+    color: #fff; /* Couleur blanche */
+}
+
+/* Section d'informations */
+.infos-pied {
+    flex: 1; /* Occupe une partie égale */
+    text-align: center; /* Centre le texte */
+}
+
+.logo-footer {
+    max-width: 150px; /* Limite la taille du logo */
+    margin-bottom: 1rem; /* Espacement sous le logo */
+}
+
+.description {
+    font-size: 1rem; /* Taille du texte */
+    margin-bottom: 1rem; /* Espacement sous le texte */
+}
+
+.copyright {
+    font-size: 0.8rem; /* Texte plus petit */
+    color: #aaa; /* Couleur grise */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .pied-de-page {
+        flex-direction: column; /* Empile les sections verticalement */
+        align-items: center; /* Centre les éléments */
+    }
+
+    .reseaux-sociaux {
+        gap: 1rem; /* Réduit l'espacement entre les icônes */
+    }
+
+    .infos-pied {
+        margin-top: 2rem; /* Ajoute un espacement au-dessus */
+    }
+}
+
+
+/* FIN DE LA DEUXIEME PAGE */

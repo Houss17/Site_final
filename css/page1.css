@@ -1,0 +1,448 @@
+/* Styles de base */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    width: 100%;
+}
+
+.nav {
+    background-color: #333; /* Couleur de fond */
+    color: white;          /* Couleur du texte */
+    padding: 0.5rem 1rem;  /* Espacement interne */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ombre */
+}
+
+.nav-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo */
+.img_molen {
+    height: 50px; /* Taille du logo */
+    cursor: pointer;
+}
+
+/* Menu de navigation */
+.nav_ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem; /* Espacement entre les éléments */
+    margin: 0;
+    padding: 0;
+}
+.nav_ul li {
+    display: inline-block;
+}
+.nav_ul li a {
+    text-decoration: none;
+    color: white; /* Couleur du texte */
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+/* Effet hover sur les liens */
+.nav_ul li a:hover {
+    color: #e91e63; /* Couleur au survol */
+    font-weight: bold;
+}
+/* Pour un rendu responsive */
+@media (max-width: 768px) {
+    .nav-div {
+        flex-direction: column; /* Empile les éléments */
+    }
+    .nav_ul {
+        flex-direction: column; /* Menu vertical */
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+
+
+/* section page de garde  */
+.section-page {
+    width: 100%;
+    height: 100vh; /* Prend toute la hauteur de la fenêtre */
+    overflow: hidden;
+}
+
+.div-img {
+    position:relative ;
+    width: 100%;
+    height: 100%;
+}
+.div-img img {
+    width: 100%; /* L'image occupe toute la largeur */
+    height: 100%; /* L'image occupe toute la hauteur */
+    object-fit: cover; /* Ajuste l'image sans déformation */
+    opacity: 0.8;
+}
+.overlay{
+    position: absolute; 
+    text-align: center;
+    top: 15em;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    color: rgb(250, 249, 249);
+    font-size: larger;
+    font-weight: 700;
+}
+.overlay button {
+    background-color: #007BFF; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    padding: 0.75rem 1.5rem; /* Espacement interne */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    font-size: 1rem; /* Taille de la police */
+    cursor: pointer; /* Curseur pointeur */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition pour l'effet de survol */
+    margin-top: 1rem; /* Espace au-dessus du bouton */
+}
+.overlay button:hover {
+    background-color: #0056b3; /* Couleur de fond au survol */
+    transform: scale(1.05); /* Agrandissement léger au survol */
+}
+.overlay button:active {
+    background-color: #004494; /* Couleur de fond lors du clic */
+    transform: scale(1); /* Réinitialisation de l'agrandissement */
+}
+
+
+
+
+/* coding */
+/* Section Coding */
+.section-coding {
+    background-color: #f9f9f9; /* Couleur de fond claire */
+    padding: 2rem; /* Espacement autour de la section */
+    text-align: center;
+}
+.titre-section {
+    font-size: 2.5rem; /* Taille du titre principal */
+    color: #333; /* Couleur du texte */
+    margin-bottom: 2rem; /* Espacement en bas */
+}
+/* Conteneur principal : Flex pour aligner l'image et le texte */
+.contenu-section {
+    display: flex; /* Aligne les enfants (image et texte) côte à côte */
+    flex-wrap: wrap; /* Permet un retour à la ligne sur petits écrans */
+    gap: 1rem; /* Espacement entre l'image et le texte */
+    justify-content: center; /* Centre le contenu horizontalement */
+    align-items: center; /* Aligne les éléments verticalement */
+}
+/* Bloc Image */
+.bloc-image img {
+    width: 100%; /* L'image occupe toute la largeur disponible dans son conteneur */
+    max-width: 800px; /* Augmente la taille maximale de l'image */
+    height: auto; /* Conserve les proportions de l'image */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    flex: 1; /* L'image occupe un espace flexible */
+    margin: 0 auto; /* Centre l'image horizontalement */
+}
+
+/* Bloc Texte */
+.bloc-texte {
+    max-width: 400px; /* Limite la largeur du texte */
+    text-align: left; /* Alignement du texte à gauche */
+    flex: 1; /* Le texte occupe un espace flexible */
+}
+.paragraphe {
+    font-size: 1.2rem; /* Taille du texte */
+    line-height: 1.2; /* Hauteur de ligne pour une meilleure lisibilité */
+    margin-bottom: 0.8rem; /* Espacement entre les paragraphes */
+    color: #555; /* Couleur du texte */
+}
+.sous-titre {
+    font-size: 1.8rem; /* Taille du sous-titre */
+    color: #e91e63; /* Couleur accrocheuse */
+    margin: 1.5rem 0; /* Espacement au-dessus et en dessous */
+}
+/* Bouton d'inscription */
+.bouton-inscription {
+    background-color: #e91e63; /* Couleur de fond du bouton */
+    color: white; /* Couleur du texte */
+    border: none; /* Supprime la bordure */
+    padding: 1rem 2rem; /* Espacement interne du bouton */
+    font-size: 1rem; /* Taille du texte */
+    font-weight: bold; /* Texte en gras */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur pointeur au survol */
+    transition: background-color 0.3s ease; /* Transition douce au survol */
+}
+.bouton-inscription:hover {
+    background-color: #d0174d; /* Couleur plus foncée au survol */
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contenu-section {
+        flex-direction: column; /* Empile l'image et le texte */
+        text-align: center; /* Centre le texte sur petits écrans */
+    }
+    .bloc-texte {
+        text-align: center; /* Centre le texte */
+    }
+}
+/* Molengeek c'est quoi */
+/* Section MolenGeek */
+.section-molengeek {
+    background-color: #f4f4f4; /* Couleur de fond douce */
+    padding: 3rem; /* Espacement autour de la section */
+    text-align: center; /* Centre le contenu */
+    border-radius: 10px; /* Coins arrondis pour un style moderne */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    margin: 2rem auto; /* Centrage horizontal */
+    max-width: 800px; /* Largeur maximale de la section */
+}
+/* Conteneur principal */
+.contenu-molengeek {
+    display: flex;
+    flex-direction: column; /* Empile les éléments verticalement */
+    align-items: center; /* Centre les éléments horizontalement */
+    gap: 1.5rem; /* Espacement entre les éléments */
+}
+/* Titre principal */
+.titre-molengeek {
+    font-size: 2.5rem; /* Taille du texte */
+    font-weight: bold; /* Met le texte en gras */
+    color: #333; /* Couleur principale */
+    margin-bottom: 1rem; /* Espacement sous le titre */
+}
+/* Surlignage dans le titre */
+.highlight {
+    color: #e91e63; /* Couleur vive pour attirer l'attention */
+}
+/* Paragraphe */
+.paragraphe-molengeek {
+    font-size: 1.2rem; /* Taille de la police */
+    line-height: 1.8; /* Hauteur de ligne pour une meilleure lisibilité */
+    color: #555; /* Couleur douce pour le texte */
+    text-align: justify; /* Justifie le texte pour un rendu propre */
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section-molengeek {
+        padding: 2rem; /* Réduit le padding sur petits écrans */
+    }
+    .titre-molengeek {
+        font-size: 2rem; /* Réduit la taille du titre */
+    }
+    .paragraphe-molengeek {
+        font-size: 1rem; /* Réduit la taille des paragraphes */
+    }
+}
+
+
+
+
+
+/* Nos partenaires */
+/* Section partenaires */
+.section-partenaires {
+    background-color: #f9f9f9; /* Couleur de fond douce */
+    padding: 3rem 1rem; /* Espacement autour de la section */
+    text-align: center; /* Centre le contenu */
+    border-radius: 10px; /* Coins arrondis */
+    margin: 2rem auto; /* Centrage avec marges */
+    max-width: 1200px; /* Largeur maximale */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+/* Titre de la section */
+.titre-partenaires {
+    font-size: 2rem; /* Taille du titre */
+    color: #333; /* Couleur principale */
+    margin-bottom: 2rem; /* Espacement sous le titre */
+    font-weight: bold; /* Texte en gras */
+}
+/* Rangée de logos */
+.rang-partenaires {
+    display: flex; /* Flexbox pour aligner les logos */
+    justify-content: center; /* Centre les logos horizontalement */
+    align-items: center; /* Aligne les logos verticalement */
+    gap: 2rem; /* Espacement entre les logos */
+    flex-wrap: wrap; /* Retourne à la ligne si nécessaire */
+    margin-bottom: 2rem; /* Espacement entre les rangées */
+}
+/* Logos des partenaires */
+.logo-partenaire {
+    max-width: 150px; /* Largeur maximale des logos */
+    height: auto; /* Maintient les proportions */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation au survol */
+}
+/* Effet au survol des logos */
+.logo-partenaire:hover {
+    transform: scale(1.1); /* Agrandit légèrement le logo */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ajoute une ombre */
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .rang-partenaires {
+        gap: 1rem; /* Réduit l'espacement entre les logos */
+    }
+    .logo-partenaire {
+        max-width: 120px; /* Réduit la taille des logos sur petits écrans */
+    }
+}
+
+
+
+/* map et contact */
+/* Section contact */
+.section-contact {
+    display: flex; /* Flexbox pour aligner la carte et les informations côte à côte */
+    justify-content: center; /* Centre horizontalement */
+    align-items: flex-start; /* Aligne les éléments en haut */
+    gap: 2rem; /* Espacement entre la carte et les informations */
+    padding: 2rem; /* Espacement intérieur */
+    background-color: #f9f9f9; /* Couleur de fond douce */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    margin: 2rem auto; /* Centrage de la section */
+    max-width: 1200px; /* Largeur maximale */
+}
+/* Conteneur pour la carte */
+.map-container {
+    flex: 1; /* La carte occupe 50% de la largeur */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.carte-google {
+    width: 100%; /* Adapte la carte à son conteneur */
+    height: 450px; /* Hauteur fixe */
+    border: 0; /* Supprime la bordure par défaut */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre autour de la carte */
+}
+
+
+/* Conteneur des informations de contact */
+#infos-contact {
+    flex: 1; /* Les informations occupent 50% de la largeur */
+    text-align: left; /* Texte aligné à gauche */
+}
+/* Titre principal */
+.titre-contact {
+    font-size: 2rem; /* Taille du titre */
+    color: #333; /* Couleur du texte */
+    margin-bottom: 1rem; /* Espacement sous le titre */
+    font-weight: bold; /* Texte en gras */
+}
+/* Sous-titre */
+.sous-titre-contact {
+    font-size: 1.5rem; /* Taille du sous-titre */
+    color: #555; /* Couleur secondaire */
+    margin-bottom: 1rem; /* Espacement sous le sous-titre */
+}
+
+
+
+
+/* Adresse */
+.adresse-contact,
+.details-contact {
+    font-size: 1.2rem; /* Taille du texte */
+    line-height: 1.8; /* Hauteur de ligne pour une meilleure lisibilité */
+    color: #555; /* Couleur du texte */
+    margin-bottom: 1rem; /* Espacement entre les sections */
+}
+/* Lien email */
+.email-contact {
+    color: #e91e63; /* Couleur vive pour le lien email */
+    text-decoration: none; /* Supprime le soulignement */
+}
+.email-contact:hover {
+    text-decoration: underline; /* Ajoute un soulignement au survol */
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section-contact {
+        flex-direction: column; /* Empile la carte et les informations verticalement */
+        align-items: center; /* Centre les éléments */
+    }
+    .carte-google {
+        height: 300px; /* Réduit la hauteur de la carte sur petits écrans */
+    }
+    .infos-contact {
+        text-align: center; /* Centre le texte sur petits écrans */
+    }
+}
+
+
+
+/* Footer reseaux sociaux */
+/* Footer global */
+.pied-de-page {
+    background-color: #333; /* Couleur de fond sombre */
+    color: #fff; /* Texte blanc */
+    padding: 2rem 1rem; /* Espacement interne */
+    display: flex; /* Flexbox pour aligner les sections */
+    justify-content: space-between; /* Espacement entre les sections */
+    flex-wrap: wrap; /* Retourne à la ligne si nécessaire */
+    text-align: center; /* Centre le texte par défaut */
+}
+/* Section des réseaux sociaux */
+.reseaux-sociaux {
+    display: flex; /* Aligne les réseaux horizontalement */
+    gap: 2rem; /* Espacement entre les icônes */
+    justify-content: center; /* Centre les icônes horizontalement */
+    flex-wrap: wrap; /* Retourne à la ligne si nécessaire */
+    flex: 1; /* Occupe une partie égale */
+    margin-bottom: 2rem; /* Espacement en bas pour petits écrans */
+}
+.reseau {
+    display: flex; /* Flexbox pour aligner l'icône et le texte */
+    flex-direction: column; /* Aligne verticalement */
+    align-items: center; /* Centre les éléments */
+    gap: 0.5rem; /* Espacement entre l'icône et le nom */
+    font-size: 1rem; /* Taille du texte */
+}
+.reseau i {
+    font-size: 2rem; /* Taille des icônes */
+    color: #e91e63; /* Couleur principale des icônes */
+    transition: transform 0.3s ease, color 0.3s ease; /* Animation au survol */
+}
+.reseau i:hover {
+    transform: scale(1.2); /* Agrandit l'icône au survol */
+    color: #fff; /* Change la couleur au survol */
+}
+.nom-reseau {
+    font-size: 1rem; /* Taille du texte */
+    font-weight: bold; /* Texte en gras */
+    color: #fff; /* Couleur blanche */
+}
+/* Section d'informations */
+.infos-pied {
+    flex: 1; /* Occupe une partie égale */
+    text-align: center; /* Centre le texte */
+}
+.logo-footer {
+    max-width: 150px; /* Limite la taille du logo */
+    margin-bottom: 1rem; /* Espacement sous le logo */
+}
+.description {
+    font-size: 1rem; /* Taille du texte */
+    margin-bottom: 1rem; /* Espacement sous le texte */
+}
+.copyright {
+    font-size: 0.8rem; /* Texte plus petit */
+    color: #aaa; /* Couleur grise */
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .pied-de-page {
+        flex-direction: column; /* Empile les sections verticalement */
+        align-items: center; /* Centre les éléments */
+    }
+    .reseaux-sociaux {
+        gap: 1rem; /* Réduit l'espacement entre les icônes */
+    }
+    .infos-pied {
+        margin-top: 2rem; /* Ajoute un espacement au-dessus */
+    }
+}
+/* FIN DE LA PREMIERE PAGE */
