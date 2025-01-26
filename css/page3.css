@@ -69,6 +69,7 @@ body {
 
 
 
+
 /* Conteneur de l'image */
 .div-cowork {
     position: relative; /* Permet de positionner le texte par rapport à ce conteneur */
@@ -98,6 +99,7 @@ body {
     border-radius: 5px; /* Arrondir les coins du fond */
     text-align: center; /* Centrer le texte à l'intérieur */
 }
+
 
 
 
@@ -147,6 +149,7 @@ body {
     line-height: 1.6; /* Hauteur de ligne pour améliorer la lisibilité */
     margin-bottom: 15px; /* Espace sous chaque paragraphe */
 }
+
 
 
 
@@ -211,6 +214,7 @@ body {
     border-radius: 10px; /* Coins arrondis pour l'image */
     
 }
+
 
 
 /* horaire */
@@ -278,9 +282,9 @@ body {
 }
 
 
+
+
 /* Agenda */
-
-
 /* Section Agenda */
 .agenda-section {
     padding: 2rem;
@@ -342,8 +346,9 @@ body {
     }
 }
 
-/* rejoindre la time molengeek  */
 
+
+/* rejoindre la time molengeek  */
 /* Section principale */
 .section-communaute {
     display: flex;
@@ -391,9 +396,6 @@ body {
 
 
 /* footer */
-
-/* footer */
-
 /* Footer global */
 .pied-de-page {
     background-color: #333; /* Couleur de fond sombre */

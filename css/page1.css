@@ -4,7 +4,7 @@ body {
     font-family: Arial, sans-serif;
     width: 100%;
 }
-
+/* navbar */
 .nav {
     background-color: #333; /* Couleur de fond */
     color: white;          /* Couleur du texte */
@@ -66,7 +66,7 @@ body {
 .section-page {
     width: 100%;
     height: 100vh; /* Prend toute la hauteur de la fenêtre */
-    overflow: hidden;
+    overflow: hidden; 
 }
 
 .div-img {
@@ -145,6 +145,8 @@ body {
     margin: 0 auto; /* Centre l'image horizontalement */
 }
 
+
+
 /* Bloc Texte */
 .bloc-texte {
     max-width: 400px; /* Limite la largeur du texte */
@@ -187,6 +189,9 @@ body {
         text-align: center; /* Centre le texte */
     }
 }
+
+
+
 /* Molengeek c'est quoi */
 /* Section MolenGeek */
 .section-molengeek {
@@ -290,6 +295,7 @@ body {
 
 
 
+
 /* map et contact */
 /* Section contact */
 .section-contact {
@@ -338,6 +344,7 @@ body {
     color: #555; /* Couleur secondaire */
     margin-bottom: 1rem; /* Espacement sous le sous-titre */
 }
+
 
 
 
