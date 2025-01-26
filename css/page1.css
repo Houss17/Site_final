@@ -4,6 +4,9 @@ body {
     font-family: Arial, sans-serif;
     width: 100%;
 }
+
+
+
 /* navbar */
 .nav {
     background-color: #333; /* Couleur de fond */
@@ -34,31 +37,38 @@ body {
     margin: 0;
     padding: 0;
 }
+
 .nav_ul li {
     display: inline-block;
 }
+
 .nav_ul li a {
     text-decoration: none;
     color: white; /* Couleur du texte */
     font-size: 1rem;
     transition: color 0.3s ease;
 }
+
 /* Effet hover sur les liens */
 .nav_ul li a:hover {
     color: #e91e63; /* Couleur au survol */
     font-weight: bold;
 }
+
 /* Pour un rendu responsive */
 @media (max-width: 768px) {
     .nav-div {
         flex-direction: column; /* Empile les éléments */
     }
+
     .nav_ul {
         flex-direction: column; /* Menu vertical */
         align-items: center;
         gap: 1rem;
     }
 }
+
+
 
 
 
