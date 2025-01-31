@@ -23,14 +23,12 @@ nextButton.addEventListener('click', () => {
 
 
 
-// // menu burger 
-// // Sélectionne le bouton burger et le menu
-// const burgerBtn = document.querySelector('.burger-btn');
-// const navMenu = document.querySelector('.nav_ul');
+// menu burger 
+document.addEventListener('DOMContentLoaded', () => {
+    const burger = document.querySelector('.burger');
+    const navUl = document.querySelector('.nav_ul');
 
-// // Ajoute un événement au clic
-// burgerBtn.addEventListener('click', () => {
-//     // Active/désactive la classe "open"
-//     burgerBtn.classList.toggle('open');
-//     navMenu.classList.toggle('open');
-// });
+    burger.addEventListener('click', () => {
+        navUl.classList.toggle('active');
+    });
+});

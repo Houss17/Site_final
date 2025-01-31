@@ -6,7 +6,6 @@ body {
 }
 
 
-
 /* navbar */
 .nav {
     background-color: #333; /* Couleur de fond */
@@ -55,18 +54,40 @@ body {
     font-weight: bold;
 }
 
-/* Pour un rendu responsive */
+
+/* Burger menu */
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+/* Responsive styles */
 @media (max-width: 768px) {
-    .nav-div {
-        flex-direction: column; /* Empile les éléments */
+    .nav_ul {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
     }
 
-    .nav_ul {
-        flex-direction: column; /* Menu vertical */
-        align-items: center;
-        gap: 1rem;
+    .nav_ul.active {
+        display: flex;
+    }
+
+    .burger {
+        display: block;
     }
 }
+
 
 
 
